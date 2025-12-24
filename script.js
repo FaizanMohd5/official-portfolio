@@ -19,7 +19,7 @@ function toggleMenu() {
 }
 
 
-const roles = ["Full-Stack Developer", "Backend Specialist", "Tech Blogger", "Programming Trainer"];
+const roles = ["Backend", "Full-stack", "Databases", "Security"];
 let i = 0, j = 0, isDeleting = false;
 
 function type() {
@@ -31,7 +31,7 @@ function type() {
     j++;
     if (j === current.length) {
       isDeleting = true;
-      setTimeout(type, 1000); // pause before deleting
+      setTimeout(type, 500); // pause before deleting
       return;
     }
   } else {
@@ -43,7 +43,7 @@ function type() {
     }
   }
 
-  setTimeout(type, isDeleting ? 50 : 120);
+  setTimeout(type, isDeleting ? 30 : 80);
 }
 
 type();
